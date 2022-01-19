@@ -18,5 +18,10 @@ docker-compose up
 cat shard-magic.sql | docker exec -i highload-homework-20_postgres-b_1 psql postgresql://postgres:postgres@postgres-b:5432/postgres
 ```
 
-https://www.kaggle.com/brosen255/goodreads-books
+## Test performance
 
+```
+$ python test_insert.py
+Write with sharding = 1324.4388916492462 sec
+Write without sharding = 833.7225177288055 sec
+```
